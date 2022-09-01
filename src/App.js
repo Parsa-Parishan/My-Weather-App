@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import Search from "./components/Search.js";
 import { weatherAPIURL, weatherAPIKey } from "./data/data";
+import Current from "./components/Current";
 
 function App() {
   const [currentWeather, setCurrentWeather] = useState(null);
   const [forecast, setForecast] = useState(null);
+  const [unit, setUnit] = useState(1);
 
   const handleSearch = (searchData) => {
     const [latitude, longitude] = searchData.value.split(" ");
@@ -32,6 +34,7 @@ function App() {
   return (
     <div className="App">
       <Search handleSearch={handleSearch} />
+      <Current data={currentWeather} />
     </div>
   );
 }
