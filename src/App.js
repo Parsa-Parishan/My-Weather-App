@@ -32,9 +32,33 @@ function App() {
       });
   };
 
+  const handleChange = (e) => {
+    setUnit(() => e.target.value);
+  };
+
   return (
     <div className="App">
       <Search handleSearch={handleSearch} />
+      {currentWeather && (
+        <div onChange={handleChange} className="convert">
+          <span className="unit">
+            <input
+              type="radio"
+              id="celcius"
+              name="unit"
+              value={1}
+              defaultChecked={true}
+            />
+            <label htmlFor="celcius">C</label>
+          </span>
+          <span className="unit">
+            <input type="radio" id="farenheit" name="unit" value={1.8} />
+            <label htmlFor="farenheit" id="farenheit">
+              F
+            </label>
+          </span>
+        </div>
+      )}
       {currentWeather && <Current data={currentWeather} unit={unit} />}
       {forecast && <Forecast data={forecast} unit={unit} />}
     </div>
