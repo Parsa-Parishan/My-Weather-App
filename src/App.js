@@ -4,7 +4,6 @@ import { weatherAPIURL, weatherAPIKey } from "./data/data";
 import Current from "./components/Current";
 import Forecast from "./components/Forecast";
 import Loader from "./components/Loader";
-import background from "./background/background.gif";
 
 function App() {
   const [currentWeather, setCurrentWeather] = useState(null);
@@ -38,8 +37,6 @@ function App() {
     setUnit(() => e.target.value);
   };
 
-  document.body.style.backgroundImage = `url(${background})`;
-
   return (
     <div className="App">
       <Search handleSearch={handleSearch} />
@@ -64,7 +61,7 @@ function App() {
         </div>
       )}
       <Loader />
-      {currentWeather && <Current data={currentWeather} unit={unit} />}
+      <Current data={currentWeather} unit={unit} />
       {forecast && <Forecast data={forecast} unit={unit} />}
     </div>
   );
