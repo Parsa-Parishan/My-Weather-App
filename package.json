@@ -11,10 +11,13 @@
     "react-icons": "^4.4.0",
     "react-scripts": "5.0.1",
     "react-select-async-paginate": "^0.6.2",
+    "react-transition-group": "^4.4.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
