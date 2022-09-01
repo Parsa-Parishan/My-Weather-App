@@ -14,8 +14,31 @@ import rain_night from "../background/rain_night.gif";
 import snow from "../background/snow.gif";
 import thunderstorm from "../background/thunderstorm.gif";
 
-
 export default function Current({ data, unit }) {
+  const [background, setBackground] = useState(undefined);
+
+  document.body.style.backgroundImage = `url(${background})`;
+
+  useEffect(() => {
+    if (data.weather[0].icon === "01d") {
+      setBackground(() => clear_day);
+    } else if (data.weather[0].icon === "01n") {
+      setBackground(() => clear_night);
+    } else if (["02d", "03d", "04d"].some((e) => e === data.weather[0].icon)) {
+      setBackground(() => cloudy_day);
+    } else if (["02n", "03n", "04n"].some((e) => e === data.weather[0].icon)) {
+      setBackground(() => cloudy_night);
+    } else if (["09d", "10d"].some((e) => e === data.weather[0].icon)) {
+      setBackground(() => rain_day);
+    } else if (["09n", "10n"].some((e) => e === data.weather[0].icon)) {
+      setBackground(() => rain_night);
+    } else if (["13d", "13n"].some((e) => e === data.weather[0].icon)) {
+      setBackground(() => snow);
+    } else if (["11d", "11n"].some((e) => e === data.weather[0].icon)) {
+      setBackground(() => thunderstorm);
+    }
+  }, [data.weather[0].icon]);
+
   return (
     <>
       <div className="current">
