@@ -5,6 +5,15 @@ import {
   FaTachometerAlt,
   FaWater,
 } from "react-icons/fa";
+import clear_day from "../background/clear_day.gif";
+import clear_night from "../background/clear_night.gif";
+import cloudy_day from "../background/cloudy_day.gif";
+import cloudy_night from "../background/cloudy_night.gif";
+import rain_day from "../background/rain_day.gif";
+import rain_night from "../background/rain_night.gif";
+import snow from "../background/snow.gif";
+import thunderstorm from "../background/thunderstorm.gif";
+
 
 export default function Current({ data, unit }) {
   return (
