@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Search from "./components/Search.js";
 import { weatherAPIURL, weatherAPIKey } from "./data/data";
 import Current from "./components/Current";
