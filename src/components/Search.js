@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { AsyncPaginate } from "react-select-async-paginate";
 import { geoApiOptions, URLToFetch } from "../data/data";
 
-export default function Search({ handleSearches }) {
+export default function Search({ handleSearch }) {
   const [search, setSearch] = useState(null);
 
   const loadOptions = (input) => {
@@ -26,7 +26,7 @@ export default function Search({ handleSearches }) {
 
   const handleChange = (searchData) => {
     setSearch(() => searchData);
-    handleSearches(searchData);
+    handleSearch(searchData);
   };
 
   return (
