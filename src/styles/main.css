@@ -1,0 +1,262 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove padding from ul, ol */
+ul,
+ol {
+  padding: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* FONT SIZE */
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 0.875rem;
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+body {
+  padding: 1rem;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.App {
+  position: relative;
+  max-width: 850px;
+  margin: 0 auto;
+  z-index: 0;
+}
+
+.App .convert {
+  margin-top: 1rem;
+}
+
+.App .convert .unit {
+  position: relative;
+  width: 100%;
+  margin: 1px;
+}
+
+.App .convert .unit input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+
+.App .convert .unit label {
+  height: 100%;
+  width: 100%;
+  padding: 0.2rem 0.6rem;
+  color: black;
+  background: white;
+  border-radius: 5px 0 0 5px;
+}
+
+.App .convert .unit label#farenheit {
+  border-radius: 0 5px 5px 0 !important;
+}
+
+.App .convert .unit input:checked + label {
+  background: gray;
+}
+
+.App .current {
+  border: 1px solid white;
+  margin-top: 2.5rem;
+  border-radius: 5px;
+  margin-block: 1rem;
+  padding: 1rem;
+  -webkit-backdrop-filter: blur(0.5);
+          backdrop-filter: blur(0.5);
+  color: white;
+}
+
+.App .current .main div {
+  text-align: center;
+}
+
+.App .current .main .city {
+  font-size: 1.5rem;
+}
+
+.App .current .main .temp {
+  font-size: 3.5rem;
+}
+
+.App .current .main .description {
+  font-size: 1.1rem;
+}
+
+.App .current .main .high_low {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.App .current .main .high_low p + p {
+  margin-left: 0.6rem;
+}
+
+.App .current .details {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  margin-top: 2.5rem;
+}
+
+.App .current .details div {
+  padding: 0.3rem;
+  border-radius: 10px;
+  background-color: rgba(128, 128, 128, 0.5);
+}
+
+.App .current .details div .label {
+  font-size: 0.7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.App .current .details div .value {
+  font-size: 2rem;
+}
+
+.App .wrapper {
+  position: fixed;
+  inset: 0 0 0 0;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #d9d9d9;
+  -webkit-transition: all 1.25s linear;
+  transition: all 1.25s linear;
+}
+/*# sourceMappingURL=main.css.map */
