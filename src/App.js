@@ -34,7 +34,7 @@ function App() {
   return (
     <div className="App">
       <Search handleSearch={handleSearch} />
-      <Current data={currentWeather} />
+      {currentWeather && <Current data={currentWeather} unit={unit} />}
     </div>
   );
 }
