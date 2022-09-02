@@ -4,7 +4,8 @@ body {
   padding: 1rem;
   // background-image: url("../weather_background/background.webp");
   background-size: cover;
-  background-position: center;
+  background-repeat: no-repeat;
+  background-position: 30% 20%;
   background-attachment: fixed;
   position: relative;
 }
