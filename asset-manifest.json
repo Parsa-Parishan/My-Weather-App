@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/My-Weather-App/static/css/main.5f27a91d.css",
+    "main.js": "/My-Weather-App/static/js/main.988b8fdc.js",
+    "static/media/thunderstorm.gif": "/My-Weather-App/static/media/thunderstorm.00dae23e9f9cbd4d41cb.gif",
+    "static/media/snow.gif": "/My-Weather-App/static/media/snow.5b1aaa9a951a1633b85a.gif",
+    "static/media/rain_night.gif": "/My-Weather-App/static/media/rain_night.7a4fa0af99b90bf234d9.gif",
+    "static/media/clear_night.gif": "/My-Weather-App/static/media/clear_night.a6fb5a47849af6eea649.gif",
+    "static/media/cloudy_night.gif": "/My-Weather-App/static/media/cloudy_night.5a4ef65d1fc9736efc58.gif",
+    "static/media/backgroundd.gif": "/My-Weather-App/static/media/backgroundd.ba5176a0344212511047.gif",
+    "static/media/rain_day.gif": "/My-Weather-App/static/media/rain_day.664e50cfd7665c66c659.gif",
+    "static/media/clear_day.gif": "/My-Weather-App/static/media/clear_day.7c951ec5719263870159.gif",
+    "static/media/cloudy_day.gif": "/My-Weather-App/static/media/cloudy_day.573adf5056c3eed85009.gif",
+    "static/media/loader.gif": "/My-Weather-App/static/media/loader.fb156cc75b66618fbef6.gif",
+    "index.html": "/My-Weather-App/index.html",
+    "main.5f27a91d.css.map": "/My-Weather-App/static/css/main.5f27a91d.css.map",
+    "main.988b8fdc.js.map": "/My-Weather-App/static/js/main.988b8fdc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5f27a91d.css",
+    "static/js/main.988b8fdc.js"
+  ]
+}
