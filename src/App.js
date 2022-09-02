@@ -4,11 +4,13 @@ import { weatherAPIURL, weatherAPIKey } from "./data/data";
 import Current from "./components/Current";
 import Forecast from "./components/Forecast";
 import Loader from "./components/Loader";
+import { CSSTransition } from "react-transition-group";
 
 function App() {
   const [currentWeather, setCurrentWeather] = useState(null);
   const [forecast, setForecast] = useState(null);
   const [unit, setUnit] = useState(1);
+  const [transition, setTransition] = useState(false);
 
   const handleSearch = (searchData) => {
     const [latitude, longitude] = searchData.value.split(" ");
@@ -37,9 +39,13 @@ function App() {
     setUnit(() => e.target.value);
   };
 
+  const handleTransition = () => {
+    setTransition(!transition);
+  };
+
   return (
     <div className="App">
-      <Search handleSearch={handleSearch} />
+      <Search handleSearch={handleSearch} transition={handleTransition} />
       {currentWeather && (
         <div onChange={handleChange} className="convert">
           <span className="unit">
@@ -61,7 +67,15 @@ function App() {
         </div>
       )}
       <Loader />
-      <Current data={currentWeather} unit={unit} />
+      <CSSTransition
+        in={transition}
+        timeout={500}
+        classNames="appear"
+        onEnter={() => handleTransition}
+        onExited={() => handleTransition}
+      >
+        <Current data={currentWeather} unit={unit} />
+      </CSSTransition>
       {forecast && <Forecast data={forecast} unit={unit} />}
     </div>
   );
