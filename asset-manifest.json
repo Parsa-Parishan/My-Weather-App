@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/My-Weather-App/static/css/main.5f27a91d.css",
-    "main.js": "/My-Weather-App/static/js/main.988b8fdc.js",
+    "main.css": "/My-Weather-App/static/css/main.1d78b124.css",
+    "main.js": "/My-Weather-App/static/js/main.1c01c55c.js",
     "static/media/thunderstorm.gif": "/My-Weather-App/static/media/thunderstorm.00dae23e9f9cbd4d41cb.gif",
     "static/media/snow.gif": "/My-Weather-App/static/media/snow.5b1aaa9a951a1633b85a.gif",
     "static/media/rain_night.gif": "/My-Weather-App/static/media/rain_night.7a4fa0af99b90bf234d9.gif",
@@ -13,11 +13,11 @@
     "static/media/cloudy_day.gif": "/My-Weather-App/static/media/cloudy_day.573adf5056c3eed85009.gif",
     "static/media/loader.gif": "/My-Weather-App/static/media/loader.fb156cc75b66618fbef6.gif",
     "index.html": "/My-Weather-App/index.html",
-    "main.5f27a91d.css.map": "/My-Weather-App/static/css/main.5f27a91d.css.map",
-    "main.988b8fdc.js.map": "/My-Weather-App/static/js/main.988b8fdc.js.map"
+    "main.1d78b124.css.map": "/My-Weather-App/static/css/main.1d78b124.css.map",
+    "main.1c01c55c.js.map": "/My-Weather-App/static/js/main.1c01c55c.js.map"
   },
   "entrypoints": [
-    "static/css/main.5f27a91d.css",
-    "static/js/main.988b8fdc.js"
+    "static/css/main.1d78b124.css",
+    "static/js/main.1c01c55c.js"
   ]
 }
